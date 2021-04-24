@@ -1,7 +1,7 @@
 package problem1;
 
 public class pc_serial {
-    private static final int NUM_END = 200000;
+    private static final int NUM_END = 18;
     public static void main(String[] args){
         int counter =0;
         int i;

@@ -6,6 +6,35 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch pc_dynamic",
+            "request": "launch",
+            "mainClass": "problem1.pc_dynamic",
+            "projectName": "MulticoreComputing_de01e7d4"
+        },
+        {
+            "type": "java",
+            "name": "Launch pc_static",
+            "request": "launch",
+            "mainClass": "problem1.pc_static",
+            "jdkpath": "C:/Program Files/Java/jdk-14/bin",
+            "projectName": "MulticoreComputing_de01e7d4"
+        },
+        {
+            "type": "java",
+            "name": "Launch pc_serial",
+            "request": "launch",
+            "mainClass": "problem1.pc_serial",
+            "projectName": "MulticoreComputing_de01e7d4"
+        },
+        {
+            "type": "java",
+            "name": "Launch ex2",
+            "request": "launch",
+            "mainClass": "problem1.ex2",
+            "projectName": "MulticoreComputing_de01e7d4"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
