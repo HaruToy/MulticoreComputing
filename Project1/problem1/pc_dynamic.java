@@ -2,7 +2,7 @@ package problem1;
 import java.util.concurrent.atomic.*;
 public class pc_dynamic {
     private static int NUM_END = 200000;
-    static int NUM_THREAD=14;
+    static int NUM_THREAD=32;
     public static void main(String[] args){
         int result;
 

@@ -11,18 +11,22 @@ import java.io.FileNotFoundException;
 // In eclipse, set the argument value and file input by using the menu [Run]->[Run Configurations]->{[Arguments], [Common->Input File]}.
 
 // Original JAVA source code: http://stackoverflow.com/questions/21547462/how-to-multiply-2-dimensional-arrays-matrix-multiplication
-public class MatmultD
+public class MatmultThread
 {
 
   static Scanner sc = new Scanner(System.in);
+  static int thread_no=0;
+  static int n;
+  static int p;
+  static int ans[][];
   public static void main(String [] args)
   {
     String path = System.getProperty("user.dir");
-    File file = new File(path+"\\Project1\\problem2\\"+sc.nextLine());
+    File file = new File(path+"\\Project1\\problem2\\"+args[1]);
     try{
       sc = new Scanner(file);
-      int thread_no=0;
-      if (args.length==1) thread_no = Integer.valueOf(args[0]);
+      
+      if (args.length==2) thread_no = Integer.valueOf(args[0]);
       else thread_no = 1;
       System.out.println(args[0]);
       int a[][]=readMatrix();
@@ -34,7 +38,7 @@ public class MatmultD
 
       //printMatrix(a);
       //printMatrix(b);    
-      printMatrix(c);
+      //printMatrix(c);
 
       //System.out.printf("thread_no: %d\n" , thread_no);
       //System.out.printf("Calculation Time: %d ms\n" , endTime-startTime);
@@ -75,21 +79,59 @@ public class MatmultD
   }
 
   public static int[][] multMatrix(int a[][], int b[][]){//a[m][n], b[n][p]
+    long[] ThreadTime = new long[thread_no];
+    multiMThread[] mt = new multiMThread[thread_no];
     if(a.length == 0) return new int[0][0];
     if(a[0].length != b.length) return null; //invalid dims
 
-    int n = a[0].length;
+    n = a[0].length;
     int m = a.length;
-    int p = b[0].length;
-    int ans[][] = new int[m][p];
+    p = b[0].length;
+    ans = new int[m][p];
 
-    for(int i = 0;i < m;i++){
+    for(int i=0;i<thread_no;i++){
+      if(i==thread_no-1)
+      {
+          mt[i] = new multiMThread(((m)/(thread_no))*i,m,ans,a,b,p,n);
+      }
+      else
+      {
+          mt[i] = new multiMThread(((m)/(thread_no))*i,((m)/(thread_no))*(i+1),ans,a,b,p,n);
+      }
+      long startThreadTime = System.currentTimeMillis();
+      ThreadTime[i]=startThreadTime;
+      mt[i].start();
+  }
+  try {
+      for(int i=0; i < thread_no; i++) {
+        mt[i].join();
+        long endThreadTime = System.currentTimeMillis();
+        ThreadTime[i]=endThreadTime-ThreadTime[i];
+        System.out.println(i+" "+ThreadTime[i]+" ");
+      }
+    } catch (InterruptedException IntExp) {
+    }
+    return ans;
+  }
+}
+class multiMThread extends Thread{
+  int lo;
+  int hi;
+  int[][] ans;
+  int[][] a;
+  int[][] b;
+  int p;
+  int n;
+  multiMThread(int l, int h,int[][] an,int[][] ad,int[][] bd,int pd,int nd){
+      lo=l; hi=h; ans=an; a=ad; b=bd; p=pd; n=nd;
+  }
+  public void run(){
+    for(int i = lo;i < hi;i++){
       for(int j = 0;j < p;j++){
         for(int k = 0;k < n;k++){
           ans[i][j] += a[i][k] * b[k][j];
         }
       }
     }
-    return ans;
   }
 }
