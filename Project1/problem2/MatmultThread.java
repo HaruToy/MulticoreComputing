@@ -4,13 +4,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 //import java.lang.*;
 
-// command-line execution example) java MatmultD 6 < mat500.txt
+// command-line execution example) java MatmultD 6 mat500.txt
 // 6 means the number of threads to use
-// < mat500.txt means the file that contains two matrices is given as standard input
-//
-// In eclipse, set the argument value and file input by using the menu [Run]->[Run Configurations]->{[Arguments], [Common->Input File]}.
+// mat500.txt means the file that contains two matrices is given as standard input
 
-// Original JAVA source code: http://stackoverflow.com/questions/21547462/how-to-multiply-2-dimensional-arrays-matrix-multiplication
 public class MatmultThread
 {
 
@@ -28,7 +25,6 @@ public class MatmultThread
       
       if (args.length==2) thread_no = Integer.valueOf(args[0]);
       else thread_no = 1;
-      System.out.println(args[0]);
       int a[][]=readMatrix();
       int b[][]=readMatrix();
 
@@ -38,7 +34,7 @@ public class MatmultThread
 
       //printMatrix(a);
       //printMatrix(b);    
-      //printMatrix(c);
+      printMatrix(c);
 
       //System.out.printf("thread_no: %d\n" , thread_no);
       //System.out.printf("Calculation Time: %d ms\n" , endTime-startTime);
@@ -69,12 +65,12 @@ public class MatmultThread
     int sum = 0;
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < columns; j++) {
-        System.out.printf("%4d " , mat[i][j]);
+        //System.out.printf("%4d " , mat[i][j]);
         sum+=mat[i][j];
       }
-      System.out.println();
+      //System.out.println();
     }
-    System.out.println();
+    //System.out.println();
     System.out.println("Matrix Sum = " + sum + "\n");
   }
 
@@ -107,7 +103,7 @@ public class MatmultThread
         mt[i].join();
         long endThreadTime = System.currentTimeMillis();
         ThreadTime[i]=endThreadTime-ThreadTime[i];
-        System.out.println(i+" "+ThreadTime[i]+" ");
+        System.out.println(i+"th thread's Execution Time : "+ThreadTime[i]+" ");
       }
     } catch (InterruptedException IntExp) {
     }

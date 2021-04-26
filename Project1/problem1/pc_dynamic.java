@@ -2,15 +2,14 @@ package problem1;
 import java.util.concurrent.atomic.*;
 public class pc_dynamic {
     private static int NUM_END = 200000;
-    static int NUM_THREAD=32;
+    static int NUM_THREAD=16;
     public static void main(String[] args){
         int result;
-
         long startTime = System.currentTimeMillis();
         result=prime(NUM_END);
         long endTime = System.currentTimeMillis();
         long timeDiff = endTime - startTime;
-        System.out.println("Execution Time : "+timeDiff+"ms");
+        System.out.println("[Dynamic LB] # of Thread : "+NUM_THREAD+"\nExecution Time : "+timeDiff+"ms");
         System.out.println("1..."+(NUM_END-1)+" prime# counter="+result+"\n");
     }
     static AtomicInteger number=new AtomicInteger(1);
@@ -29,7 +28,8 @@ public class pc_dynamic {
               pt[i].join();
               long endThreadTime = System.currentTimeMillis();
               ThreadTime[i]=endThreadTime-ThreadTime[i];
-              //System.out.println(i+" "+ThreadTime[i]+" ");
+              System.out.println(i+"th thread's Execution Time : "+ThreadTime[i]+" ");
+              //Output the sum of the results returned by the thread.
               ans += pt[i].ans;
             }
           } catch (InterruptedException IntExp) {
@@ -47,6 +47,7 @@ class PrimeDThread extends Thread{
     PrimeDThread(AtomicInteger n,int e){
         number=n; end=e;
     }
+    //Each Thread checks if the value of the variable, atomic integer, is a prime number or not until N, Increment the value of the variable which other threads check.
     public void run(){
         int n=number.incrementAndGet();
         while(n<end)
