@@ -1,0 +1,118 @@
+결과3/ 차 40대, 주차 공간 10대
+
+Car 34: trying to enter
+Car 34: entered
+Car 34: left
+Car 8: trying to enter
+Car 8: entered
+Car 16: trying to enter
+Car 16: entered
+Car 12: trying to enter
+Car 12: entered
+Car 24: trying to enter
+Car 24: entered
+Car 30: trying to enter
+Car 30: entered
+Car 40: trying to enter
+Car 40: entered
+Car 1: trying to enter
+Car 1: entered
+Car 16: left
+Car 9: trying to enter
+Car 9: entered
+Car 7: trying to enter
+Car 7: entered
+Car 30: left
+Car 40: left
+Car 31: trying to enter
+Car 31: entered
+Car 37: trying to enter
+Car 37: entered
+Car 7: left
+Car 9: left
+Car 25: trying to enter
+Car 25: entered
+Car 7: trying to enter
+Car 7: entered
+Car 31: left
+Car 39: trying to enter
+Car 39: entered
+Car 1: left
+Car 12: left
+Car 26: trying to enter
+Car 26: entered
+Car 7: left
+Car 8: left
+Car 18: trying to enter
+Car 18: entered
+Car 20: trying to enter
+Car 20: entered
+Car 17: trying to enter
+Car 17: entered
+Car 33: trying to enter
+Car 33: entered
+Car 18: left
+Car 25: left
+Car 26: left
+Car 39: left
+Car 24: left
+Car 20: left
+Car 37: left
+Car 6: trying to enter
+Car 6: entered
+Car 28: trying to enter
+Car 28: entered
+Car 20: trying to enter
+Car 20: entered
+Car 17: left
+Car 23: trying to enter
+Car 23: entered
+Car 27: trying to enter
+Car 27: entered
+Car 28: left
+Car 36: trying to enter
+Car 36: entered
+Car 6: left
+Car 12: trying to enter
+Car 12: entered
+Car 20: left
+Car 14: trying to enter
+Car 14: entered
+Car 4: trying to enter
+Car 4: entered
+Car 24: trying to enter
+Car 24: entered
+Car 34: trying to enter
+Car 34: entered
+Car 13: trying to enter
+Car 13: entered
+Car 37: trying to enter
+Car 18: trying to enter
+Car 3: trying to enter
+Car 10: trying to enter
+Car 19: trying to enter
+Car 38: trying to enter
+Car 5: trying to enter
+Car 35: trying to enter
+Car 22: trying to enter
+Car 1: trying to enter
+Car 30: trying to enter
+Car 28: trying to enter
+Car 15: trying to enter
+Car 2: trying to enter
+Car 29: trying to enter
+Car 31: trying to enter
+Car 21: trying to enter
+Car 9: trying to enter
+Car 16: trying to enter
+Car 8: trying to enter
+Car 11: trying to enter
+Car 32: trying to enter
+Car 17: trying to enter
+Car 7: trying to enter
+Car 20: trying to enter
+Car 40: trying to enter
+Car 26: trying to enter
+Car 6: trying to enter
+Car 25: trying to enter
+Car 39: trying to enter

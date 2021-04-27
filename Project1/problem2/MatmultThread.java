@@ -92,7 +92,9 @@ public class MatmultThread
       }
       else
       {
-          mt[i] = new multiMThread(((m)/(thread_no))*i,((m)/(thread_no))*(i+1),ans,a,b,p,n);
+          mt[i] = new multiM
+          
+          Thread(((m)/(thread_no))*i,((m)/(thread_no))*(i+1),ans,a,b,p,n);
       }
       long startThreadTime = System.currentTimeMillis();
       ThreadTime[i]=startThreadTime;

@@ -1,0 +1,73 @@
+결과2/ 차 40대, 주차 공간 10대
+
+Car 20: trying to enter
+Car 20: entered
+Car 14: trying to enter
+Car 14: entered
+Car 22: trying to enter
+Car 22: entered        
+Car 29: trying to enter
+Car 29: entered
+Car 12: trying to enter
+Car 12: entered
+Car 15: trying to enter
+Car 15: entered
+Car 28: trying to enter
+Car 28: entered
+Car 20: left
+Car 33: trying to enter
+Car 33: entered
+Car 37: trying to enter
+Car 37: entered
+Car 24: trying to enter
+Car 24: entered
+Car 37: left
+Car 5: trying to enter
+Car 5: entered
+Car 28: left
+Car 11: trying to enter
+Car 11: entered
+Car 29: left
+Car 3: trying to enter
+Car 3: entered
+Car 14: left
+Car 3: left
+Car 1: trying to enter
+Car 1: entered
+Car 35: trying to enter
+Car 35: entered
+Car 38: trying to enter
+Car 38: entered
+Car 15: left
+Car 34: trying to enter
+Car 34: entered
+Car 27: trying to enter
+Car 23: trying to enter
+Car 40: trying to enter
+Car 13: trying to enter
+Car 3: trying to enter
+Car 10: trying to enter
+Car 36: trying to enter
+Car 26: trying to enter
+Car 31: trying to enter
+Car 37: trying to enter
+Car 20: trying to enter
+Car 6: trying to enter
+Car 14: trying to enter
+Car 7: trying to enter
+Car 18: trying to enter
+Car 16: trying to enter
+Car 19: trying to enter
+Car 32: trying to enter
+Car 28: trying to enter
+Car 17: trying to enter
+Car 25: trying to enter
+Car 4: trying to enter
+Car 39: trying to enter
+Car 2: trying to enter
+Car 29: trying to enter
+Car 30: trying to enter
+Car 8: trying to enter
+Car 9: trying to enter
+Car 21: trying to enter
+Car 15: trying to enter
