@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ArrayBlockingQueueExample",
+            "request": "launch",
+            "mainClass": "Project2.ArrayBlockingQueueExample",
+            "projectName": "MulticoreComputing_de01e7d4"
+        },
+        {
+            "type": "java",
             "name": "Launch MatmultThread",
             "request": "launch",
             "mainClass": "problem2.MatmultThread",

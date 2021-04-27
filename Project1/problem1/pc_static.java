@@ -1,4 +1,4 @@
-package problem1;
+package Project1.problem1;
 
 public class pc_static {
     private static int NUM_END = 200000;
